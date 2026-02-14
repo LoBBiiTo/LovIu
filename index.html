@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+  <title>Mi Amor - Regalo Especial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .text-section {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      padding: 25px;
+      margin: 25px 0;
+      backdrop-filter: blur(10px);
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .counter {
+      font-size: 2.2rem;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .music-btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .music-btn:hover {
+      transform: scale(1.05);
+      background: #ff5252;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto; 
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Mi Amor, Este es Nuestro Momento ❤️</h1>
+    
+    <div class="text-section">
+      <p>A veces me detengo a pensar en cómo sería mi vida si no te hubiera conocido, y la verdad... no puedo imaginármelo. Porque desde que llegaste, todo cambió. No hablo de grandes cosas, sino de detalles pequeños que hacen la diferencia: tu voz en mi cabeza cuando necesito calma, tu forma de mirar el mundo, o esa paz que me da simplemente saber que existes. No sé si algún día pueda explicarte lo mucho que significas para mí, pero sí sé que cada día quiero demostrarte, de una forma u otra, con palabras o silencios, con presencia o distancia. Gracias por ser vos, con todo lo que sos, incluso con lo que no sabes que sos para mí. ❤️</p>
+    </div>
+
+    <div class="counter" id="counter">Cargando...</div>
+
+    <div class="text-section">
+      <p>Todas las noches pienso en lo mucho que quiero cuidarte y que estés feliz, que nunca pienses que no me importas, yo podré tener miles de problemas pero si me necesitas mil veces, mil veces estaré para vos, así me tenga que parar de cabeza para que sonrías lo hago, porque gracias a vos estoy sintiendo una mejor versión de mí, así que no pienses que no me importas, porque al contrario, me importas demasiado. 💙❤️</p>
+    </div>
+
+    <div class="gallery">
+      <img src="src/bb1.jpeg" alt="Nuestra foto 1">
+      <img src="src/bb2.jpg" alt="Nuestra+foto+2">
+      <img src="src/bb3.jpg" alt="Nuestra+foto+3">
+      <img src="src/bb5.jpg" alt="Nuestra+foto+4">
+    </div>
+
+    <footer>
+      Creado con ❤️ para ti | Fecha de inicio: 20 de enero de 2026
+    </footer>
+  </div>
+
+  <script>
+    const startDate = new Date('2026-01-20T00:00:00');
+    function updateCounter() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('counter').textContent = 
+        `Días: ${days} | Horas: ${hours} | Min: ${minutes} | Seg: ${seconds}`;
+    }
+    setInterval(updateCounter, 1000);
+    updateCounter();
+  </script>
+</body>
+</html>
