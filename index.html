@@ -9,14 +9,14 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      background: linear-gradient(135deg, #e87ed1 0%, #f6b0e7 100%);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: white;
       text-align: center;
       min-height: 100vh;
       padding: 20px;
-      overflow-x: hidden;
+      overflow-x: hidden; 
     }
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
@@ -50,21 +50,7 @@
       margin: 30px 0;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    .music-btn {
-      background: #ff6b6b;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      margin: 20px 0;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .music-btn:hover {
-      transform: scale(1.05);
-      background: #ff5252;
-    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -79,25 +65,53 @@
       object-fit: contain;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
+    /* ===== ANIMACIONES DE ENTRADA ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, .text-section, .counter, .gallery, .music-container, footer {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    h1 { animation-delay: 0.2s; }
+    .text-section:first-child { animation-delay: 0.4s; }
+    .counter { animation-delay: 0.6s; }
+    .text-section:last-child { animation-delay: 0.8s; }
+    .gallery { animation-delay: 1s; }
+    .music-container { animation-delay: 1.2s; }
+    footer { animation-delay: 1.4s; }
+
     footer {
       margin-top: 40px;
       font-size: 0.9rem;
       opacity: 0.8;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>❤️ Mi Amor, Este es Nuestro Momento ❤️</h1>
+    <h1>❤️ Este es Nuestro Momento ❤️</h1>
     
     <div class="text-section">
-      <p>A veces me detengo a pensar en cómo sería mi vida si no te hubiera conocido, y la verdad... no puedo imaginármelo. Porque desde que llegaste, todo cambió. No hablo de grandes cosas, sino de detalles pequeños que hacen la diferencia: tu voz en mi cabeza cuando necesito calma, tu forma de mirar el mundo, o esa paz que me da simplemente saber que existes. No sé si algún día pueda explicarte lo mucho que significas para mí, pero sí sé que cada día quiero demostrarte, de una forma u otra, con palabras o silencios, con presencia o distancia. Gracias por ser vos, con todo lo que sos, incluso con lo que no sabes que sos para mí. ❤️</p>
+      <p>A veces me pongo a pensar en cómo sería mi vida si no te hubiera conocido, y la verdad... no puedo imaginármelo. Porque desde que llegaste, todo cambió. No hablo de grandes cosas, sino de detalles pequeños que hacen la diferencia: tu voz en mi cabeza cuando necesito calma, tu forma de mirar el mundo, o esa paz que me da simplemente saber que existes. No sé si algún día pueda explicarte lo mucho que significas para mí, pero sí sé que cada día quiero demostrarte, de una forma u otra, con palabras o silencios, con presencia o distancia. Gracias por ser vos, con todo lo que sos, incluso con lo que no sabes que significas para mí. ❤️</p>
     </div>
 
     <div class="counter" id="counter">Cargando...</div>
 
     <div class="text-section">
-      <p>Todas las noches pienso en lo mucho que quiero cuidarte y que estés feliz, que nunca pienses que no me importas, yo podré tener miles de problemas pero si me necesitas mil veces, mil veces estaré para vos, así me tenga que parar de cabeza para que sonrías lo hago, porque gracias a vos estoy sintiendo una mejor versión de mí, así que no pienses que no me importas, porque al contrario, me importas demasiado. 💙❤️</p>
+      <p>Todas las noches pienso en lo mucho que quiero cuidarte y que estés feliz, que nunca pienses que no me importas, yo podré tener miles de problemas pero si me necesitas mil veces, mil veces voy a estar para vos, haría lo que fuese para verte feliz, con una sonrisa, porque gracias a vos estoy sintiendo una mejor versión de mí, así que no pienses que no me importas, porque al contrario, me importas demasiado. 💙❤️</p>
     </div>
 
     <div class="gallery">
